@@ -7,7 +7,7 @@ See Example section for more.
 
 Install thru composer
 
-    php composer.phar require codemonkeys/repository-alias-bundle
+    php composer.phar require codemonkeys-ru/repository-alias-bundle
 
 And add bundle to your AppKernel.php
 
