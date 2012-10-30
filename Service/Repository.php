@@ -23,6 +23,11 @@ class Repository
         return $this->container;
     }
 
+    public function getEntityManager()
+    {
+        return $this->em;
+    }
+
     /**
      * Factory method for instanciating new repo services
      *
@@ -36,6 +41,7 @@ class Repository
         );
 
         $decoratedRepo = new \CodeMonkeysRu\RepositoryAliasBundle\Service\CreationalRepositoryDecorator($this, $repositoryName, $repo);
+        $decoratedRepo = new \CodeMonkeysRu\RepositoryAliasBundle\Service\GetReferenceRepositoryDecorator($this, $repositoryName, $decoratedRepo);
 
         return $decoratedRepo;
     }
