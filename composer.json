@@ -1,7 +1,7 @@
 {
     "name": "codemonkeys-ru/repository-alias-bundle",
     "type": "symfony-bundle",
-    "description": "CodeMonkeysRu RepositoryAliasBundle",
+    "description": "Symfony2 bundle providing alias syntax for working with entity repositories",
     "keywords": ["symfony", "repository alias", "repository", "alias"],
     "license": "MIT",
     "authors": [
