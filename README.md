@@ -41,3 +41,14 @@ Use:
 
 	$repo = $this->get('project.repo.blogpost'); //Note repository_key "project.repo" usage.
 	$post = $this->get('project.repo.blogpost')->newEntity('title', 'post', $author);
+
+
+# ChangeLog
+
+## v0.1.1
+
+* Added backloop interface
+
+## v0.1.0
+
+* Initial version

@@ -4,6 +4,7 @@
     "description": "Symfony2 bundle providing alias syntax for working with entity repositories",
     "keywords": ["symfony", "repository alias", "repository", "alias"],
     "license": "MIT",
+    "version": "0.1.1",
     "authors": [
         {
             "name": "Vladimir Savenkov",
