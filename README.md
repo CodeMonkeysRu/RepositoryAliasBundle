@@ -45,6 +45,10 @@ Use:
 
 # ChangeLog
 
+## v0.1.2
+
+* Added getAliasFor() method
+
 ## v0.1.1
 
 * Added backloop interface

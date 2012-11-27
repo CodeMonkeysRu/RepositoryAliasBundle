@@ -50,6 +50,26 @@ class Repository
         return $decoratedRepo;
     }
 
+    static private $aliasMap = null;
+
+    public function getAliasFor($entityClass)
+    {
+        if (is_object($entityClass)) {
+            $entityClass = get_class($entityClass);
+        }
+        if (self::$aliasMap === null) {
+            self::$aliasMap = array();
+            foreach ($this->repositoryMap as $alias => $classname) {
+                $meta = $this->em->getClassMetaData($classname);
+                self::$aliasMap[$meta->name] = $alias;
+            }
+        }
+        if (!array_key_exists($entityClass, self::$aliasMap)) {
+            return false;
+        }
+        return self::$aliasMap[$entityClass];
+    }
+
     public function newEntity()
     {
 
