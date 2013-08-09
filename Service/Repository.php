@@ -86,7 +86,7 @@ class Repository
         if ($class->getConstructor() === null) {
             $result = $class->newInstance();
         } else {
-            $result = $class->newInstance($args);
+            $result = $class->newInstanceArgs($args[0]);
         }
 
         return $result;
