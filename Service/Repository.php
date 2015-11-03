@@ -40,7 +40,8 @@ class Repository
             $this->getRepositoryName($repositoryName)
         );
 
-        $decoratedRepo = new \CodeMonkeysRu\RepositoryAliasBundle\Service\CreationalRepositoryDecorator($this, $repositoryName, $repo);
+        $decoratedRepo = new \CodeMonkeysRu\RepositoryAliasBundle\Service\GetOriginalRepositoryDecorator($this, $repositoryName, $repo);
+        $decoratedRepo = new \CodeMonkeysRu\RepositoryAliasBundle\Service\CreationalRepositoryDecorator($this, $repositoryName, $decoratedRepo);
         $decoratedRepo = new \CodeMonkeysRu\RepositoryAliasBundle\Service\GetReferenceRepositoryDecorator($this, $repositoryName, $decoratedRepo);
 
         if (is_a($repo, '\\CodeMonkeysRu\\RepositoryAliasBundle\\Entity\\BackloopAwareInterface')) {

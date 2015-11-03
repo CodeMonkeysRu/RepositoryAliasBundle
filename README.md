@@ -45,6 +45,10 @@ Use:
 
 # ChangeLog
 
+## v0.1.3
+
+* Added getOriginalRepository decorator. Useful while configuring repos thru di container
+
 ## v0.1.2
 
 * Added getAliasFor() method
